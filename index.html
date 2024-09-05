@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="caixa">
+        <h1>Cotação</h1>
+
+        <input type="number" name="Valor" placeholder="USD" class="ValorTransformar" onkeyup="VerificarEnter(event, '1')">
+        <input type="number" name="Valor" placeholder="BRL" class="ValorTransformar2" onkeyup="VerificarEnter(event, '2')">
+
+        <button type="submit" onclick="Dados()">Enter</button>
+
+        <div id="content">
+            <div id="Moeda">
+            
+                <button onclick="ExpandirMoedasSelecionadas()" id="MoedaSelecionada">USD</button>
+    
+                <div id="MoedaExpandida">
+                    <button onclick="MudarMoeda('BRL')" id="SelecionarMoeda">BRL</button>
+                    <button onclick="MudarMoeda('USD')" id="SelecionarMoeda">USD</button>
+                </div>
+            </div>
+    
+            <div id="Convert">
+    
+                <button onclick="ExpandirMoedasConvertidas()" id="MoedaConvertida">BRL</button>
+    
+                <div id="ConvertExpandida">
+                    <button onclick="MudarConvert('BRL')" id="SelecionarConvert">BRL</button>
+                    <button onclick="MudarConvert('USD')" id="SelecionarConvert">USD</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
